@@ -40,13 +40,15 @@ func (l *Library) IterateBooks(f func(Book) error) {
 	}
 }
 
-// TODO: createIterator returns a BookIterator that can access the book
+// DONE: createIterator returns a BookIterator that can access the book
 // collection on demand
 func (l *Library) createIterator() iterator {
 	return &BookIterator{
 		books: l.Collection,
 	}
 }
+
+// END EXAMPLE
 
 // -------------------
 // Create a Library structure to hold a set of Books

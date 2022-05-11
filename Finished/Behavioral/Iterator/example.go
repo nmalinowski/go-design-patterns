@@ -12,13 +12,15 @@ func main() {
 		fmt.Println("Book Author:", b.Author)
 		return nil
 	})
-	// TODO: create a BookIterator
+	// DONE: create a BookIterator
 	iter := lib.createIterator()
 	for iter.hasNext() {
 		book := iter.next()
 		fmt.Printf("Book %+v\n", book)
 	}
 }
+
+// END EXAMPLE
 
 // This callback function processes an individual Book object
 func myBookCallback(b Book) error {
